@@ -1,0 +1,86 @@
+<GuiControl
+    Name="NetworkMenu"
+    canSaveDynamicFields="0"
+    Profile="GuiDefaultProfile"
+    HorizSizing="right"
+    VertSizing="bottom"
+    Position="0 0"
+    Extent="640 480"
+    MinExtent="8 2"
+    canSave="1"
+    Visible="1"
+    hovertime="1000">
+    
+    <GuiWindowCtrl
+         canSaveDynamicFields="0"
+         Profile="GuiWindowProfile"
+         HorizSizing="right"
+         VertSizing="bottom"
+         Position="220 153"
+         Extent="218 153"
+         MinExtent="8 2"
+         Visible="1"
+         hovertime="1000"
+         Text="Network Menu"
+         maxLength="1024"
+         resizeWidth="0"
+         resizeHeight="0"
+         canMove="1"
+         canClose="1"
+         canMinimize="0"
+         canMaximize="0"
+         minSize="50 50"
+         closeCommand="Canvas.popDialog(NetworkMenu);">
+// --------------- Start Server -------------------         
+         <GuiButtonCtrl
+              Name="StartServer"
+              canSaveDynamicFields="0"
+              Profile="BlueButtonProfile"
+              HorizSizing="relative"
+              VertSizing="relative"
+              Position="43 31"
+              Extent="137 34"
+              MinExtent="8 2"
+              canSave="1"
+              Visible="1"
+              Command="Canvas.pushDialog(startServerGui);"
+              hovertime="1000"
+              Text="Start a Server"
+              groupNum="-1"
+              buttonType="PushButton"/>
+// --------------- Join Server -------------------              
+         <GuiButtonCtrl
+              Name="JoinServer"
+              canSaveDynamicFields="0"
+              Profile="GreenButtonProfile"
+              HorizSizing="relative"
+              VertSizing="relative"
+              Position="43 71"
+              Extent="137 31"
+              MinExtent="8 2"
+              canSave="1"
+              Visible="1"
+              Command="Canvas.pushDialog(joinServerGui);"
+              hovertime="1000"
+              Text="Join a Server"
+              groupNum="-1"
+              buttonType="PushButton"/>
+// --------------- Disconnect -------------------              
+         <GuiButtonCtrl
+              Name="Disconnect"
+              canSaveDynamicFields="0"
+              Profile="RedButtonProfile"
+              HorizSizing="relative"
+              VertSizing="relative"
+              Position="43 110"
+              Extent="137 30"
+              MinExtent="8 2"
+              canSave="1"
+              Visible="1"
+              Command="disconnect();"
+              hovertime="1000"
+              Text="Disconnect"
+              groupNum="-1"
+              buttonType="PushButton"/>
+    </GuiWindowCtrl> 
+</GuiControl>

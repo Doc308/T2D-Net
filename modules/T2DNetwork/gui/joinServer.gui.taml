@@ -1,0 +1,348 @@
+<GuiControl
+    Name="joinServerGui"
+    Profile="GuiDefaultProfile"
+    HorizSizing="width"
+    VertSizing="height"
+    Position="0 0"
+    Extent="640 480"
+    MinExtent="8 8"
+    Visible="1"
+    useVariable="0"
+    helpTag="0">
+    
+    <GuiControl
+         Profile="GuiWindowProfile"
+         HorizSizing="center"
+         VertSizing="center"
+         Position="60 80"
+         Extent="520 320"
+         MinExtent="8 8"
+         Visible="1"
+         helpTag="0">
+// --------------- Server Name -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="10 59"
+              Extent="75 18"
+              MinExtent="8 8"
+              Visible="1"
+              Text="Server Name"
+              maxLength="255"
+              helpTag="0"/>
+// --------------- Query Master -------------------         
+         <GuiButtonCtrl
+              Name="JS_queryMaster"
+              Profile="BlueButtonProfile"
+              HorizSizing="right"
+              VertSizing="top"
+              Position="216 289"
+              Extent="94 23"
+              MinExtent="8 8"
+              Visible="1"
+              Command="joinServerGui.query();"
+              Text="Query Master"
+              groupNum="-1"
+              buttonType="PushButton"
+              helpTag="0"/>
+// --------------- Query Lan -------------------         
+         <GuiButtonCtrl
+              Name="JS_queryLan"
+              Profile="BlueButtonProfile"
+              HorizSizing="right"
+              VertSizing="top"
+              Position="114 289"
+              Extent="90 23"
+              MinExtent="8 8"
+              Visible="1"
+              Command="joinServerGui.queryLan();"
+              Text="Query LAN"
+              groupNum="-1"
+              buttonType="PushButton"
+              helpTag="0"/>
+// --------------- Refresh Server -------------------         
+         <GuiButtonCtrl
+              Name="JS_refreshServer"
+              Profile="BlueButtonProfile"
+              HorizSizing="right"
+              VertSizing="top"
+              Position="318 289"
+              Extent="105 23"
+              MinExtent="8 8"
+              Visible="1"
+              Command="joinServerGui.refresh();"
+              Text="Refresh Server"
+              groupNum="-1"
+              buttonType="PushButton"
+              helpTag="0"/>
+// --------------- Join Server -------------------         
+         <GuiButtonCtrl
+              Name="JS_joinServer"
+              Profile="BlueButtonProfile"
+              HorizSizing="right"
+              VertSizing="top"
+              Position="420 289"
+              Extent="90 23"
+              MinExtent="8 8"
+              Visible="1"
+              Command="joinServerGui.join();"
+              Text="Join Server"
+              groupNum="-1"
+              buttonType="PushButton"
+              helpTag="0"
+              active="0"/>
+// --------------- Server List -------------------         
+         <GuiScrollCtrl
+              Profile="GuiScrollProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="10 92"
+              Extent="500 186"
+              MinExtent="8 8"
+              Visible="1"
+              willFirstRepond="1"
+              hScrollBar="dynamic"
+              vScrollBar="alwaysOn"
+              constantThumbHeight="0"
+              childMargin="0 0"
+              defaultLineHeight="15"
+              helpTag="0">
+                   <GuiTextListCtrl
+                        Name="JS_serverList"
+                        Profile="GuiTextArrayProfile"
+                        horizSizing="right"
+                        vertSizing="bottom"
+                        Position="2 2"
+                        MinExtent="8 8"
+                        Visible="1"
+                        enumerate="0"
+                        resizeCell="1"
+                        columns="0 305 370 500"
+                        fitParentWidth="1"
+                        clipColumnText="0"
+                        noDuplicates="false"
+                        helpTag="0"/>
+         </GuiScrollCtrl>               
+// --------------- Server Player Name -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="10 30"
+              Extent="75 18"
+              MinExtent="8 8"
+              Visible="1"
+              Text="Player Name:"
+              maxLength="255"
+              helpTag="0"/>
+         <GuiTextEditCtrl              
+              Name="joinServerPlayerName"
+              Profile="GuiTextEditProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="98 34"
+              Extent="134 18"
+              MinExtent="8 8"
+              Visible="1"
+              maxLength="255"
+              historySize="0"
+              password="0"
+              tabComplete="0"
+              sinkAllKeyEvents="0"
+              helpTag="0"/>
+// --------------- Players -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="360 65"
+              Extent="50 18"
+              MinExtent="8 8"
+              Visible="1"
+              Text="Players"
+              maxLength="255"
+              helpTag="0"/>
+// --------------- Version -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="532 70"
+              Extent="38 18"
+              MinExtent="8 8"
+              Visible="1"
+              Text="Version"
+              maxLength="255"
+              helpTag="0"/>
+// --------------- Game -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="520 63"
+              Extent="28 18"
+              MinExtent="8 8"
+              Visible="1"
+              Text="Game"
+              maxLength="255"
+              helpTag="0"/>
+// --------------- Ping -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="314 66"
+              Extent="20 18"
+              MinExtent="8 8"
+              Visible="1"
+              Text="Ping"
+              maxLength="255"
+              helpTag="0"/>
+// --------------- Status -------------------         
+         <GuiTextCtrl
+              Name="JS_status"
+              Profile="GuiBigTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="243 14"
+              Extent="266 40"
+              MinExtent="266 40"
+              Visible="1"
+              maxLength="255"/>
+// --------------- Exit Server -------------------         
+         <GuiButtonCtrl
+              Profile="BlueButtonProfile"
+              HorizSizing="right"
+              VertSizing="top"
+              Position="12 289"
+              Extent="90 23"
+              MinExtent="8 8"
+              Visible="1"
+              Command="joinServerGui.exit();"
+              Text="<< Back"
+              groupNum="-1"
+              buttonType="PushButton"
+              helpTag="0"/>
+// --------------- Query Status -------------------         
+         <GuiControl
+              Name="JS_queryStatus"
+              Profile="GuiWindowProfile"
+              HorizSizing="center"
+              VertSizing="center"
+              Position="105 135"
+              Extent="310 50"
+              MinExtent="8 8"
+              Visible="0"
+              helpTag="0">
+// --------------- Cancel Query -------------------                       
+              <GuiButtonCtrl
+                   Name="JS_cancelQuery"
+                   Profile="BlueButtonProfile"
+                   HorizSizing="right"
+                   VertSizing="bottom"
+                   Position="9 15"
+                   Extent="64 20"
+                   MinExtent="8 8"
+                   Visible="1"
+                   Command="joinServerGui.cancel();"
+                   Text="Cancel!"
+                   groupNum="-1"
+                   buttonType="PushButton"
+                   helpTag="0"/>
+// --------------- Status Bar -------------------                       
+              <GuiProgressCtrl
+                   Name="JS_statusBar"
+                   Profile="GuiProgressProfile"
+                   HorizSizing="right"
+                   VertSizing="bottom"
+                   Position="84 15"
+                   Extent="207 20"
+                   MinExtent="8 8"
+                   Visible="1"
+                   helpTag="0"/>
+              <GuiTextCtrl
+                   Name="JS_statusText"
+                   Profile="GuiProgressTextProfile"
+                   HorizSizing="right"
+                   VertSizing="bottom"
+                   Position="8 14"
+                   Extent="205 20"
+                   MinExtent="8 8"
+                   Visible="1"
+                   maxLength="255"
+                   helpTag="0"/>
+         </GuiControl>
+// --------------- Set IP Window -------------------         
+         <GuiButtonCtrl
+              Profile="BlueButtonProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="420 63"
+              Extent="95 24"
+              MinExtent="8 2"
+              Visible="1"
+              Command="setIpWindow.setVisible(true);"
+              Text="Connect To IP"
+              groupNum="-1"
+              buttonType="PushButton"/>
+         <GuiControl
+              Name="setIpWindow"
+              Profile="GuiWindowProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="314 25"
+              Extent="190 78"
+              MinExtent="8 2"
+              Visible="0">
+              <GuiTextCtrl
+                   Profile="GuiTextProfile"
+                   HorizSizing="right"
+                   VertSizing="bottom"
+                   Position="15 15"
+                   Extent="11 18"
+                   MinExtent="8 2"
+                   Visible="1"
+                   Text="IP:"
+                   maxLength="255"/>
+              <GuiTextEditCtrl
+                   Name="setIpEdit"
+                   Profile="GuiTextEditProfile"
+                   HorizSizing="right"
+                   VertSizing="bottom"
+                   Position="34 15"
+                   Extent="144 18"
+                   MinExtent="8 2"
+                   Visible="1"
+                   maxLength="255"
+                   historySize="0"
+                   password="0"
+                   tabComplete="0"
+                   sinkAllKeyEvents="0"/>
+              <GuiButtonCtrl
+                   Profile="BlueButtonProfile"
+                   HorizSizing="right"
+                   VertSizing="bottom"
+                   Position="97 42"
+                   Extent="89 27"
+                   MinExtent="8 2"
+                   Visible="1"
+                   Command="joinServerGui.connectToIp();"
+                   Text="Connect"
+                   groupNum="-1"
+                   buttonType="PushButton"/>
+              <GuiButtonCtrl
+                   Profile="BlueButtonProfile"
+                   HorizSizing="right"
+                   VertSizing="bottom"
+                   Position="3 42"
+                   Extent="89 27"
+                   MinExtent="8 2"
+                   Visible="1"
+                   Command="setIpWindow.setVisible(0);"
+                   Text="Cancel"
+                   groupNum="-1"
+                   buttonType="PushButton"/>
+         </GuiControl>
+    </GuiControl> 
+</GuiControl>

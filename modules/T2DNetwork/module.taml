@@ -1,0 +1,14 @@
+<ModuleDefinition
+	ModuleId="T2DNetwork"
+	VersionId="1"
+	Description="Network module"
+	Group="game"
+	ScriptFile="main.cs"
+	CreateFunction="create"
+	DestroyFunction="destroy">
+	
+	<DeclaredAssets
+			Path="assets"
+			Extension="asset.taml"
+			Recurse="true"/>			
+</ModuleDefinition>

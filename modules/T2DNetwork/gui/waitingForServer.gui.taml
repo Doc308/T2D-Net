@@ -1,0 +1,35 @@
+<GuiControl
+    Name="waitingForServer"
+    Profile="GuiWindowProfile"
+    HorizSizing="right"
+    VertSizing="bottom"
+    Position="250 136"
+    Extent="250 120"
+    MinExtent="8 2"
+    Visible="1">
+    
+    <GuiMLTextCtrl
+         Profile="GuiMediumTextProfile"
+         HorizSizing="right"
+         VertSizing="bottom"
+         Position="21 18"
+         Extent="172 48"
+         MinExtent="8 2"
+         Visible="1"
+         lineSpacing="2"
+         allowColorChars="0"
+         maxChars="-1"
+         Text="Waiting for Server Response..."/>
+    <GuiButtonCtrl
+         Profile="BlueButtonProfile"
+         HorizSizing="right"
+         VertSizing="bottom"
+         Position="36 90"
+         Extent="142 23"
+         MinExtent="8 2"
+         Visible="1"
+         Command="canvas.popDialog(waitingForServer);"
+         Text="CLOSE"
+         groupNum="-1"
+         buttonType="PushButton"/>
+</GuiControl>

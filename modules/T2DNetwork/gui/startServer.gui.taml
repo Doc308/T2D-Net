@@ -1,0 +1,157 @@
+<GuiControl
+    Name="startServerGui"
+    Profile="GuiDefaultProfile"
+    HorizSizing="right"
+    VertSizing="bottom"
+    Position="0 0"
+    Extent="640 480"
+    MinExtent="8 2"
+    Visible="1">
+    
+    <GuiWindowCtrl
+         Profile="GuiWindowProfile"
+         HorizSizing="right"
+         VertSizing="bottom"
+         Position="158 88"
+         Extent="308 189"
+         MinExtent="8 2"
+         Visible="1"
+         hovertime="1000"
+         Text="Start New Server"
+         maxLength="255"
+         resizeWidth="1"
+         resizeHeight="1"
+         canMove="1"
+         canClose="1"
+         canMinimize="1"
+         canMaximize="1"
+         minSize="50 50">
+// --------------- Start Server Name -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="10 32"
+              Extent="75 18"
+              MinExtent="8 2"
+              Visible="1"
+              Text="Server Name:"
+              maxLength="255"/>
+         <GuiTextEditCtrl              
+              Name="startServerName"
+              Profile="GuiTextEditProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="113 32"
+              Extent="160 18"
+              MinExtent="8 2"
+              Visible="1"
+              maxLength="255"
+              historySize="0"
+              password="0"
+              tabComplete="0"
+              sinkAllKeyEvents="0"/>
+// --------------- Server Player Name -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="10 62"
+              Extent="75 18"
+              MinExtent="8 2"
+              Visible="1"
+              Text="Player Name:"
+              maxLength="255"/>
+         <GuiTextEditCtrl              
+              Name="startServerPlayerName"
+              Profile="GuiTextEditProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="113 63"
+              Extent="160 18"
+              MinExtent="8 2"
+              Visible="1"
+              maxLength="255"
+              historySize="0"
+              password="0"
+              tabComplete="0"
+              sinkAllKeyEvents="0"/>
+// --------------- Create Server -------------------         
+         <GuiButtonCtrl
+              Profile="BlueButtonProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="154 151"
+              Extent="140 30"
+              MinExtent="8 2"
+              Visible="1"
+              Command="startServerGui.createServer(true);"
+              Text="Create Server"
+              groupNum="-1"
+              buttonType="PushButton"/>
+// --------------- Server Port -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="10 93"
+              Extent="75 18"
+              MinExtent="8 2"
+              Visible="1"
+              Text="Server Port:"
+              maxLength="255"/>
+         <GuiTextEditCtrl              
+              Name="startServerPort"
+              Profile="GuiTextEditProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="113 93"
+              Extent="160 18"
+              MinExtent="8 2"
+              Visible="1"
+              maxLength="255"
+              historySize="0"
+              password="0"
+              tabComplete="0"
+              sinkAllKeyEvents="0"/>
+// --------------- Server Max Players -------------------         
+         <GuiTextCtrl
+              Profile="GuiTextProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="10 122"
+              Extent="75 18"
+              MinExtent="8 2"
+              Visible="1"
+              Text="Max Players:"
+              maxLength="255"/>
+         <GuiTextEditCtrl              
+              Name="startServerMaxPlayers"
+              Profile="GuiTextEditProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="113 122"
+              Extent="160 18"
+              MinExtent="8 2"
+              Visible="1"
+              maxLength="255"
+              historySize="0"
+              password="0"
+              tabComplete="0"
+              sinkAllKeyEvents="0"/>
+// --------------- Cancel Server -------------------         
+         <GuiButtonCtrl
+              Profile="RedButtonProfile"
+              HorizSizing="right"
+              VertSizing="bottom"
+              Position="11 151"
+              Extent="110 30"
+              MinExtent="8 2"
+              canSave="1"
+              Visible="1"
+              Command="canvas.popDialog(startServerGui);"
+              Text="Cancel"
+              groupNum="-1"
+              buttonType="PushButton"/>
+    </GuiWindowCtrl> 
+</GuiControl>
